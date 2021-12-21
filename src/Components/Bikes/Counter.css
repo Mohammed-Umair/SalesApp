@@ -1,0 +1,8 @@
+.zaki {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40%;
+  padding-top: 200px;
+  font-size: 90px;
+  /* float: left; */
+}

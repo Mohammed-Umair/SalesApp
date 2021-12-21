@@ -1,0 +1,9 @@
+.data {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 15px !important;
+  /* border: solid black 5px !important; */
+  box-shadow: 8px 8px 5px gray !important;
+}
+
+
