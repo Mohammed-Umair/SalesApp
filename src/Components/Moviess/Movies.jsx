@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Card, Button, Col, Row } from "react-bootstrap";
+import ReactStars from "react-rating-stars-component";
 import { data } from "./moviesList";
 const Movies = () => {
   const [flim, setFlim] = useState(data);
   const [txtSearch, setTxtSearch] = useState("");
+  const ratingChanged = (newRating) => {
+    console.log(newRating);
+  };
   const handleSearch = () => {
     const FilteredMovie = data.filter((item) =>
       item.Name.toLowerCase().includes(txtSearch.toLowerCase())
@@ -52,7 +56,18 @@ const Movies = () => {
                 <Card.Text> {item.cat}</Card.Text>
                 <Card.Text> {item.Cast}</Card.Text>
                 <Card.Text> {item.Year}</Card.Text>
-                <Button variant="primary">Buy:{item.buy}</Button>
+                <ReactStars
+                  value={item.rating}
+                  count={5}
+                  onChange={ratingChanged}
+                  size={24}
+                  isHalf={true}
+                  emptyIcon={<i className="far fa-star"></i>}
+                  halfIcon={<i className="fa fa-star-half-alt"></i>}
+                  fullIcon={<i className="fa fa-star"></i>}
+                  activeColor="#ffd700"
+                />
+                ,<Button variant="primary">Buy:{item.buy}</Button>
               </Card.Body>
             </Card>
           </div>

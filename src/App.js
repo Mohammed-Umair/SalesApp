@@ -14,6 +14,7 @@ import { Provider } from "react-redux";
 import { configStore } from "./State/store/configStore";
 import CheckRedux from "./Components/Bikes/CheckRedux";
 import ToogleButton from "./Components/InterviewPec/ToogleButton";
+import { Address } from "./Components/Bikes/Address";
 function App() {
   const LocalStore = configStore();
 
@@ -32,6 +33,7 @@ function App() {
           {/* <Movies /> */}
           {/* <DataList /> */}
           <Watch/>
+          {/* <Address /> */}
           <BrowserRouter>
             <NavBar />
             <Routes>
